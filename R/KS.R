@@ -45,7 +45,7 @@ KSScore <- function(refMatrix, queryUp, queryDown, permuteNum = 10000,
   }
   ## Compute the ks value
   ksScore <- function(refList, query) {
-    lenRef <- length(refList)
+    lenRef <- length(refList[[1]])
     ## Get the rank of query signatures based on refList
     queryRank <- match(query, refList)
     queryRank <- sort(queryRank[!is.na(queryRank)])
